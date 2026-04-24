@@ -158,11 +158,10 @@ Data is:
 
 ## 🤝 Contributing
 
-Contributions are welcome. Areas of interest:
-- Data integration
-- Rendering optimization
-- UI/UX improvements
-- Scientific accuracy enhancements
+We would love people who could run the included build_mac.sh file on their Mac with:
+chmod +x build_mac.sh
+./build_mac.sh
+Please upload the dmg to Google Drive and email it to apollobots2025@gmail.com. We would appreciate your help.
 
 ---
 
