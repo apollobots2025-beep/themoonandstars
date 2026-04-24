@@ -158,7 +158,12 @@ Data is:
 
 ## 🤝 Contributing
 
-We would love help turning this into an exe or dmg. A build_mac.sh file is included, and those who run it on their Macs and give me a Google Drive link to the dmg would be greatly appreciated. Send the link to apollobots2025@gmail.com.
+Contributions are welcome. Areas of interest:
+- Data integration
+- Rendering optimization
+- UI/UX improvements
+- Scientific accuracy enhancements
+
 ---
 
 ## 📄 License

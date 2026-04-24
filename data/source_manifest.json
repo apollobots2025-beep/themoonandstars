@@ -1,0 +1,162 @@
+{
+  "name": "The Moon And Stars trusted source manifest",
+  "sources": [
+    {
+      "name": "Gaia DR3",
+      "url": "https://www.cosmos.esa.int/web/gaia/dr3",
+      "use": "stellar backbone"
+    },
+    {
+      "name": "SIMBAD",
+      "url": "https://simbad.cds.unistra.fr/",
+      "use": "object metadata"
+    },
+    {
+      "name": "NED",
+      "url": "https://ned.ipac.caltech.edu/",
+      "use": "extragalactic census"
+    },
+    {
+      "name": "NASA Exoplanet Archive",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/",
+      "use": "confirmed planets"
+    },
+    {
+      "name": "MAST",
+      "url": "https://archive.stsci.edu/virtual-observatory",
+      "use": "archive and VO access"
+    },
+    {
+      "name": "SDSS",
+      "url": "https://www.sdss.org/",
+      "use": "survey data"
+    }
+  ],
+  "sky_tiles": [
+    {
+      "ra": 0,
+      "dec": -60,
+      "sr": 0.4
+    },
+    {
+      "ra": 0,
+      "dec": -30,
+      "sr": 0.4
+    },
+    {
+      "ra": 0,
+      "dec": 0,
+      "sr": 0.4
+    },
+    {
+      "ra": 0,
+      "dec": 30,
+      "sr": 0.4
+    },
+    {
+      "ra": 0,
+      "dec": 60,
+      "sr": 0.4
+    },
+    {
+      "ra": 72,
+      "dec": -60,
+      "sr": 0.4
+    },
+    {
+      "ra": 72,
+      "dec": -30,
+      "sr": 0.4
+    },
+    {
+      "ra": 72,
+      "dec": 0,
+      "sr": 0.4
+    },
+    {
+      "ra": 72,
+      "dec": 30,
+      "sr": 0.4
+    },
+    {
+      "ra": 72,
+      "dec": 60,
+      "sr": 0.4
+    },
+    {
+      "ra": 144,
+      "dec": -60,
+      "sr": 0.4
+    },
+    {
+      "ra": 144,
+      "dec": -30,
+      "sr": 0.4
+    },
+    {
+      "ra": 144,
+      "dec": 0,
+      "sr": 0.4
+    },
+    {
+      "ra": 144,
+      "dec": 30,
+      "sr": 0.4
+    },
+    {
+      "ra": 144,
+      "dec": 60,
+      "sr": 0.4
+    },
+    {
+      "ra": 216,
+      "dec": -60,
+      "sr": 0.4
+    },
+    {
+      "ra": 216,
+      "dec": -30,
+      "sr": 0.4
+    },
+    {
+      "ra": 216,
+      "dec": 0,
+      "sr": 0.4
+    },
+    {
+      "ra": 216,
+      "dec": 30,
+      "sr": 0.4
+    },
+    {
+      "ra": 216,
+      "dec": 60,
+      "sr": 0.4
+    },
+    {
+      "ra": 288,
+      "dec": -60,
+      "sr": 0.4
+    },
+    {
+      "ra": 288,
+      "dec": -30,
+      "sr": 0.4
+    },
+    {
+      "ra": 288,
+      "dec": 0,
+      "sr": 0.4
+    },
+    {
+      "ra": 288,
+      "dec": 30,
+      "sr": 0.4
+    },
+    {
+      "ra": 288,
+      "dec": 60,
+      "sr": 0.4
+    }
+  ]
+}
