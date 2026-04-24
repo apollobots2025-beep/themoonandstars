@@ -158,7 +158,7 @@ Data is:
 
 ## 🤝 Contributing
 
-We would love help turning this into an exe or dmg. A build_mac.sh fule is included, and those who run it on their Macs and give me a Google Drive link to the dmg would be greatly appreciated. Send the link to apollobots2025@gmail.com.
+We would love help turning this into an exe or dmg. A build_mac.sh file is included, and those who run it on their Macs and give me a Google Drive link to the dmg would be greatly appreciated. Send the link to apollobots2025@gmail.com.
 ---
 
 ## 📄 License
