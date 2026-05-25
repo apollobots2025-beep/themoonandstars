@@ -1,0 +1,2 @@
+import QtQuick
+Rectangle { id: root; property string text: ""; property bool selected: false; signal clicked(); width: 200; height: 38; radius: 2; color: selected ? "#123452" : "#0a1018"; border.color: selected ? "#5fb7ff" : "#203245"; border.width: 1; Text { anchors.centerIn: parent; text: root.text; color: "#d9e8f7"; font.pixelSize: 14; font.bold: true; letterSpacing: 0.8 } MouseArea { anchors.fill: parent; onClicked: root.clicked() } }

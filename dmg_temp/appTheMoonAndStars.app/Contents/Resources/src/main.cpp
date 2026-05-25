@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("appModel", &model);
     engine.rootContext()->setContextProperty("travelController", &travel);
 
-    const QUrl url(QStringLiteral("qrc:/MoonStars/qml/Main.qml"));
+    const QUrl url(u"qrc:/MoonStars/qml/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &app,
                      [url](QObject *obj, const QUrl &objUrl) {
                          if (!obj && url == objUrl)

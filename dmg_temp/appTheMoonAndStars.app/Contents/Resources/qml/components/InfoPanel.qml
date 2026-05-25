@@ -1,0 +1,2 @@
+import QtQuick
+Rectangle { id: root; width: 330; color: "#0a0d12"; border.color: "#263245"; border.width: 1; radius: 2; property string title: ""; default property alias content: contentColumn.data; Column { anchors.fill: parent; anchors.margins: 14; spacing: 10; Text { text: root.title; color: "#dfe8f2"; font.pixelSize: 16; font.bold: true; letterSpacing: 1.0 } Rectangle { width: parent.width; height: 1; color: "#223041" } Column { id: contentColumn; width: parent.width; spacing: 8 } } }

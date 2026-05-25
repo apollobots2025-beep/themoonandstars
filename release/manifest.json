@@ -1,0 +1,12 @@
+{
+  "name": "The Moon And Stars",
+  "version": "1.0.0",
+  "created": "2026-05-24",
+  "format": "macOS .app bundle",
+  "source": "https://github.com/apollobots2025-beep/themoonandstars",
+  "files": {
+    "app_bundle": "/workspaces/themoonandstars/release/appTheMoonAndStars.app",
+    "zip_archive": "/workspaces/themoonandstars/release/TheMoonAndStars-macOS.zip",
+    "dmg_temp": "/workspaces/themoonandstars/dmg_temp"
+  }
+}
