@@ -18,7 +18,7 @@ jobs:
           msystem: MINGW64
 
       - name: Update system and install dependencies
-        shell: bash -l {0}
+        shell: msys2 {0}
         run: |
           set -e
           pacman -Syu --noconfirm
@@ -32,9 +32,7 @@ jobs:
             mingw-w64-x86_64-qt6-quick3d
 
       - name: Configure and build (Release)
-        shell: bash -l {0}
-        env:
-          PATH: /mingw64/bin:${PATH}
+        shell: msys2 {0}
         run: |
           set -e
           mkdir -p build
@@ -43,7 +41,7 @@ jobs:
           cmake --build . --config Release -j
 
       - name: List build outputs
-        shell: bash -l {0}
+        shell: msys2 {0}
         run: |
           echo "Build tree:"
           ls -la build || true
