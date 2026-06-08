@@ -28,6 +28,15 @@ jobs:
             mingw-w64-x86_64-cmake \
             mingw-w64-x86_64-qt6
 
+      - name: Clean previous build cache
+        shell: msys2 {0}
+        run: |
+          set -e
+          if [ -d build ]; then
+            rm -rf build
+            echo "Removed existing build/ directory to avoid stale CMake cache."
+          fi
+
       - name: Configure and build (Release)
         shell: msys2 {0}
         run: |
