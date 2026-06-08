@@ -41,9 +41,10 @@ jobs:
         shell: msys2 {0}
         run: |
           set -e
+          export PATH=/mingw64/bin:$PATH
           mkdir -p build
           cd build
-          cmake -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/mingw64 ..
+          cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/mingw64 -DCMAKE_MAKE_PROGRAM=/mingw64/bin/mingw32-make ..
           cmake --build . --config Release -j
 
       - name: List build outputs
