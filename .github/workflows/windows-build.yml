@@ -1,0 +1,59 @@
+name: Build Windows .exe (MSYS2/MinGW)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSYS2 (MINGW64)
+        uses: msys2/actions/setup-msys2@v2
+        with:
+          msystem: MINGW64
+
+      - name: Update system and install dependencies
+        shell: bash -l {0}
+        run: |
+          set -e
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm --needed \
+            mingw-w64-x86_64-toolchain \
+            mingw-w64-x86_64-cmake \
+            mingw-w64-x86_64-qt6-base \
+            mingw-w64-x86_64-qt6-quick \
+            mingw-w64-x86_64-qt6-quickcontrols2 \
+            mingw-w64-x86_64-qt6-network \
+            mingw-w64-x86_64-qt6-quick3d
+
+      - name: Configure and build (Release)
+        shell: bash -l {0}
+        env:
+          PATH: /mingw64/bin:${PATH}
+        run: |
+          set -e
+          mkdir -p build
+          cd build
+          cmake -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/mingw64 ..
+          cmake --build . --config Release -j
+
+      - name: List build outputs
+        shell: bash -l {0}
+        run: |
+          echo "Build tree:"
+          ls -la build || true
+          echo "Find exe(s):"
+          find . -maxdepth 3 -type f -name "*.exe" -print || true
+
+      - name: Upload exe artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TheMoonAndStars-windows-exe
+          path: |
+            build/*.exe
+            build/**/Release/*.exe

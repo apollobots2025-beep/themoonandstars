@@ -112,6 +112,23 @@ This will:
 
 ---
 
+## 🪟 Build Instructions (Windows — CI)
+
+A ready-made Windows executable can be produced via the included GitHub Actions workflow. The workflow uses MSYS2/MinGW and the MSYS2 Qt6 packages to configure and build the project on GitHub's `windows-latest` runner.
+
+How to run:
+
+1. Push your changes to `main` (or open the workflow from the Actions tab and run it manually).
+2. Wait for the workflow to finish; it uploads the produced `.exe` as an artifact named `TheMoonAndStars-windows-exe`.
+3. Download the artifact from the workflow run and extract the `.exe` to run on a Windows machine.
+
+Notes:
+- The CI builds against Qt6 packages provided by MSYS2. If additional Qt modules are required, update `.github/workflows/windows-build.yml`.
+- The produced `.exe` may require the Qt DLLs from MSYS2 when run on other Windows systems; you can either redistribute the required DLLs alongside the `.exe` or use a deployment tool such as `windeployqt` on a Windows host to create a portable bundle.
+
+
+---
+
 ## 📦 Running the App
 
 After building:
