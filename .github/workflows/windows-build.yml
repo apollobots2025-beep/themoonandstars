@@ -26,11 +26,7 @@ jobs:
           pacman -S --noconfirm --needed \
             mingw-w64-x86_64-toolchain \
             mingw-w64-x86_64-cmake \
-            mingw-w64-x86_64-qt6-base \
-            mingw-w64-x86_64-qt6-quick \
-            mingw-w64-x86_64-qt6-quickcontrols2 \
-            mingw-w64-x86_64-qt6-network \
-            mingw-w64-x86_64-qt6-quick3d
+            mingw-w64-x86_64-qt6
 
       - name: Configure and build (Release)
         shell: msys2 {0}
