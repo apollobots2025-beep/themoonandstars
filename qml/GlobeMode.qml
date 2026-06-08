@@ -70,7 +70,15 @@ Item {
 
     Rectangle {
         x: 190; y: 76; width: 360; height: 36; radius: 3; color: "#0b1119cc"; border.color: "#26405c"
-        TextField { id: searchField; anchors.fill: parent; anchors.margins: 4; placeholderText: "Search by name, source, category..."; color: "#ffffff"; background: Rectangle { color: "transparent" }; onTextChanged: appModel.searchText = text }
+        TextField {
+            id: searchField
+            anchors.fill: parent
+            anchors.margins: 4
+            placeholderText: "Search by name, source, category..."
+            color: "#ffffff"
+            background: Rectangle { color: "transparent" }
+            onTextChanged: appModel.searchText = text
+        }
     }
     Rectangle {
         x: 190; y: 120; width: 360; height: 64; radius: 3; color: "#0b1119cc"; border.color: "#26405c"
